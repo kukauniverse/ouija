@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Ouija-Spiel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <div id="board">
+  <img src="sprites/board.png" id="board-img" alt="Ouija Board">
+  <img src="sprites/plane.png" id="planchette-shadow" alt="Planchette Shadow">
+  <img src="sprites/plane.png" id="planchette" alt="Planchette">
+</div>
+
+
+    <br>
+
+    <div class="input-area">
+      <input type="text" id="question" placeholder="Ask..." required>
+      <button id="askButton" onclick="askQuestion()">Enter</button>
+    </div>
+
+    <script src="script.js"></script>
+  </div>
+</body>
+</html>
