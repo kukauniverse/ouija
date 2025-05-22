@@ -1,27 +1,16 @@
 const creepySentences = [
     "leave",
-    "they are watching",
     "run 3210",
     "you are not alone",
-    "death is near",
-    "do not look behind you",
-    "get out of here",
-    "you are not safe here",
-    "they are close",
-    "you are being watched",
-    "your time is up",
-    "they will find you",
-    "there is no escape",
+    "you are not safe",
     "you can not hide",
-    "do not answer the door",
-    "something is watching from the dark",
     "listen to plume",
-    "hide 543210",
-    "time is up 9876543210",
     "heaven is closed",
-    "big things are coming"
 ];
 
+const codewordResponses = {
+    
+};
 
 const letterPositions = {
     a: { top: "46%", left: "11%" },
@@ -78,12 +67,12 @@ askButton.addEventListener("click", askQuestion);
 
 askButton.disabled = true;
 
-questionInput.addEventListener("input", function() {
-  if (questionInput.checkValidity()) {
-    askButton.disabled = false;
-  } else {
-    askButton.disabled = true;
-  }
+questionInput.addEventListener("input", function () {
+    if (questionInput.checkValidity()) {
+        askButton.disabled = false;
+    } else {
+        askButton.disabled = true;
+    }
 });
 
 
@@ -92,6 +81,16 @@ function askQuestion() {
 
     isSpelling = true;
     askButton.disabled = true;
+
+    const question = questionInput.value.trim().toLowerCase();
+
+    // Codewort prüfen
+    if (codewordResponses.hasOwnProperty(question)) {
+        currentSentence = codewordResponses[question];
+        currentLetterIndex = 0;
+        spellNextLetter();
+        return;
+    }
 
     const chance = Math.random();
 
