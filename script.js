@@ -9,7 +9,7 @@ const creepySentences = [
 ];
 
 const codewordResponses = {
-    
+    test123: "true",
 };
 
 const letterPositions = {
