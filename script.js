@@ -9,7 +9,7 @@ const creepySentences = [
 ];
 
 const codewordResponses = {
-    plume: "13062025",
+    plume: "09042026",
 };
 
 const letterPositions = {
@@ -185,4 +185,5 @@ function movePlanchette(target) {
         shadow.style.left = `calc(${pos.left} + 5px)`;
     }
 }
+
 
