@@ -1,15 +1,13 @@
 const creepySentences = [
-    "leave",
-    "run 3210",
-    "you are not alone",
-    "you are not safe",
-    "you can not hide",
+    //zufalls sätze
+    "relax you are here",
     "listen to plume",
-    "heaven is closed",
+    "have you ever seen an angel",
 ];
 
 const codewordResponses = {
-    plume: "09042026",
+    //hier strings die bestimmte ausgaben triggern
+    //plume: "09042026",
 };
 
 const letterPositions = {
