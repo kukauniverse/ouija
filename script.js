@@ -10,6 +10,8 @@ const codewordResponses = {
     //plume: "09042026",
 };
 
+const gifCodeword = "angel";
+
 const letterPositions = {
     a: { top: "46%", left: "11%" },
     b: { top: "40%", left: "18%" },
@@ -49,7 +51,7 @@ const letterPositions = {
     0: { top: "73%", left: "77%" }
 };
 
-
+const gif = document.getElementById("gif");
 
 
 let currentSentence = "";
@@ -81,6 +83,19 @@ function askQuestion() {
     askButton.disabled = true;
 
     const question = questionInput.value.trim().toLowerCase();
+
+    // GIF-Codewort prüfen
+    if (question === gifCodeword) {
+        showGif();
+
+        setTimeout(() => {
+            hideGif();
+            isSpelling = false;
+            askButton.disabled = false;
+        }, 5000);
+
+        return;
+    }
 
     // Codewort prüfen
     if (codewordResponses.hasOwnProperty(question)) {
@@ -184,4 +199,10 @@ function movePlanchette(target) {
     }
 }
 
+function showGif() {
+    gif.style.visibility = "visible";
+}
 
+function hideGif() {
+    gif.style.visibility = "hidden";
+}
