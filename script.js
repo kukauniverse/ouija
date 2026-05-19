@@ -10,7 +10,7 @@ const codewordResponses = {
     //plume: "09042026",
 };
 
-const gifCodeword = "angel";
+const gifCodeword = "plume";
 
 const letterPositions = {
     a: { top: "46%", left: "11%" },
