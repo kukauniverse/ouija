@@ -85,7 +85,6 @@ function askQuestion() {
     const question = questionInput.value.trim().toLowerCase();
 
     // GIF-Codewort prüfen
-    /*
     if (question === gifCodeword) {
         showGif();
 
@@ -97,7 +96,7 @@ function askQuestion() {
 
         return;
     }
-*/
+    
     // Codewort prüfen
     if (codewordResponses.hasOwnProperty(question)) {
         currentSentence = codewordResponses[question];
